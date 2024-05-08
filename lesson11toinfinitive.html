@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson 30 - To-Infinitive </title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+<style>
+body{ background: linear-gradient(45deg, white, #D1E4C4, white); 
+height: 830vh; }
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:15px;
+  margin-top:10px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:210px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+
+.tooltips{
+ position:relative;
+ display:block;
+ text-align:center;
+ font-size:70px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ text-align: left;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: visible;}
+
+
+.dropdown{ display: flex;}
+ .dropdown button{
+  background-color: #D1E4C4; color: black; padding: 10px 30px;
+  border:none; cursor:pointer; box-shadow: 5px 5px 7px black;
+  transition:0.05s; border-radius:4px;
+ }
+
+ .dropdown a{
+  display: flex; text-decoration: none; text-align: center; padding: 10px 23px; margin-top:10px; background-color: #D1E4C4;
+  color:black; box-shadow: 5px 5px 7px black; border-radius:4px; margin-left:5px;
+ }
+
+ .dropdown .content{
+   position: absolute; min-width:100px;
+  display:none;
+ }
+
+ .dropdown:hover .content{ 
+  display:flex;
+ }
+ .dropdown:hover button{
+  background-color: #F1F7ED; color:black;
+ }
+ .dropdown a:hover{
+  background-color: #F1F7ED; color:black;
+ }
+<nav><div class="dropdown">
+ <button>Lessons</button>
+ <div class="content">
+  <a href="lesson1new.html" target="_blank">Lesson 1</a>
+  <a href="lesson2new.html" target="_blank">Lesson 2</a>
+  <a href="lesson3new.html" target="_blank">Lesson 3</a>
+  <a href="lesson4new.html" target="_blank">Lesson 4</a>
+  <a href="lesson5new.html" target="_blank">Lesson 5</a>
+  <a href="lesson6new.html" target="_blank">Lesson 6</a>
+  <a href="lesson7new.html" target="_blank">Lesson 7</a>
+  <a href="lesson8new.html" target="_blank">Lesson 8</a>
+  <a href="lesson9new.html" target="_blank">Lesson 9</a>
+  <a href="lesson10new.html" target="_blank">Lesson 10</a>
+  <a href="lesson11new.html" target="_blank">Lesson 11</a>
+  <a href="lesson12new.html" target="_blank">Lesson 12</a>
+  <a href="lesson13new.html" target="_blank">Lesson 13</a>
+ </div>
+</div></nav>
+
+
+
+.p1 {}
+.p4 { font-size: 40px; cursor:pointer;}
+.p1 { font-size: 30px; cursor:pointer;}
+.p37 { font-size: 37px;}
+
+.div1 {display: grid; grid-template-columns: 900px; justify-content: center; margin-top: 20px; cursor:pointer;}
+.div2 {display: grid; grid-template-columns: 1fr 1fr; margin-bottom: 30px;}
+.div3 {display: grid; grid-template-columns: 1fr 1fr 1fr  ; margin-bottom: 30px;}
+.div4  {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr ; margin-bottom: 30px;}
+.div5 {display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;}
+.div6 {display: grid; grid-template-columns: 1fr 1fr;}
+.div7 {text-align: center; font-size: 40px;}
+.div8 {display: grid; grid-template-columns: 1fr 1fr 1fr;}
+.img {width:300px; height: 270px;}
+.img2 {width:300px; height: 270px; }
+
+@media screen and (max-width: 1000px){
+.p4{ font-size: 30px;}
+.p1 {font-size: 25px;}
+.p37 { font-size: 30px;}
+
+
+.div1 {display: grid; grid-template-columns: 1fr;}
+.div2 {display: grid; grid-template-columns: 1fr;}
+.div3 {display: grid; grid-template-columns: 1fr;}
+.div4 {display: grid; grid-template-columns: 1fr;}
+.div5 {display: grid; grid-template-columns: 1fr;}
+.div6 {display: grid; grid-template-columns: 1fr;}
+.div7 {text-align: center; font-size: 30px;}
+.div8 {display: grid; grid-template-columns: 1fr ;}
+.wrapper { overflow-x: hidden; width: 100%; background: linear-gradient(45deg, white, #D1E4C4, white);}
+
+.img{width:150px; height: 135px;}
+.img2 {width:150px; height: 135px; }
+
+
+.tooltips{
+ position:relative;
+ display:block;
+ text-align: center;
+ font-size:50px;
+ font-weight:bold;
+ cursor:pointer;
+ 
+}
+.tooltips .tooltipstext{
+ visibility:hidden;
+ position:absolute;
+ z-index:1;
+ left:100px;
+ width:1100px;
+ top:125%;
+ background: #F1F7ED;
+ font-size:40px;
+ font-weight:normal;
+ padding: 5px;
+ border-radius: 6px;
+ box-shadow: 5px 0px 7px black;
+ 
+}
+.tooltips:hover .tooltipstext{  visibility: hidden;}
+
+.buttons{
+  background-color:#D1E4C4;
+  color: black; 
+  box-shadow:5px 0px 7px black;
+  border-radius:10px;
+  cursor: pointer;
+  margin-right:5px;
+  font-size:30px;
+  transition: background-color 1s;
+  transition: color 1s;
+  width:250px;
+  height: 80px;  
+  border-width: 2px;
+  margin-bottom: 25px;
+  margin-left: 5px;
+  
+}
+.buttons:hover{
+background-color:#F1F7ED;
+color:black;
+box-shadow: 5px 0px 7px black;
+}
+.buttons:active{
+opacity: 0.7;
+}
+
+}
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+<div class="wrapper">
+<h1 class="tooltips"> to &mdash; infinitives  <span class="tooltipstext">also known as the infinitive form of a verb, is the base form of the verb preceded by the word "to."<br>
+In English, the infinitive is used in various ways, including as the<br><br>
+&middot;base form of the verb in a sentence &bull; after certain verbs &bull; as the subject or object of a sentence &bull; or in infinitive phrases.</span> </h1> 
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;">Verbs with <b>to-infinitives</b></div><br><br>
+
+We use the to-infinitive <b>after certain verbs</b> &middot;verbs followed by to-infinitive&middot;, particularly verbs of thinking and feeling:<br><br>
+
+<div class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+Choose<br>
+Decide<br>
+Expect<br>
+Forget  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+Hate<br>
+Hope<br>
+Learn<br>
+Intend   </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+Like<br>
+Love<br>
+Mean<br>
+Plan  </div>
+
+<div style="  text-align: center;">
+Want<br>
+Prefer<br>
+Remember<br>
+Would like &middot; love </div>
+</div><br><br>
+
+&bull; They <b>decided to</b> start a business together.<br>
+&bull; <b>Remember to</b> turn the lights off.<br><hr><br>
+
+<div style=" text-align: center;">
+and verbs of <b>saying</b>: </div><br><br>
+
+<div  class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+agree<br>  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+promise    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+refuse  </div>
+
+<div style="  text-align: center;">
+threaten   </div>
+</div><br><br>
+&bull; We <b>agreed to</b> meet at the cinema.<br>
+&bull; <b>Promise to</b> call me every day.<br><hr><br>
+
+<div style=" text-align: center;">
+Some verbs are followed by a <b>direct object</b> and then the to-infinitive:
+</div><br><br>
+
+<div  class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+ask<br>
+expect<br>
+advice<br>
+encourage
+  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+order<br>
+invite<br>
+intend<br>
+persuade    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+tell<br>
+want<br>
+warn<br>
+remind   </div>
+
+<div style="  text-align: center;">
+would prefer<br>
+would like &middot; love <br>
+-<br>
+-  </div>
+</div><br><br>
+
+&bull; He encouraged <b>his friends to</b> vote for him.<br>
+&bull; <b>Remind me to</b> give Julia a call.
+
+</div>
+</div>
+</div>
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #D1E4C4; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 37px;"><b> Infinitive of purpose
+</b></div><br>
+
+We also use the to-infinitive to express purpose &middot;to answer why?&middot;:<br><br>
+
+
+&bull;  He bought some flowers <b>to give</b> to his wife.<br>
+&bull;  He locked the door <b>to keep</b> everyone out.<br><br>
+
+We can also express purpose with <b>in order to</b> and <b>in order not to:</b><br><br>
+
+&bull;  We started our journey early <b>in order to</b> avoid the traffic.<br>
+&bull;  They spoke quietly <b>in order not to</b> wake the children.<br><br>
+
+or <b>so as to</b> and <b>so as not to:</b><br><br>
+
+&bull;  We started our journey early <b>so as to</b> avoid the traffic.<br>
+&bull;  They spoke quietly <b>so as not to</b> wake the children.<br><br>
+
+
+</div>
+</div>
+</div>
+
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #F1F7ED; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 40px;"><b>Adjectives with to-infinitives</b></div><br><br>
+We use the to-infinitive after certain adjectives:<br><br>
+
+<div class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+able<br>
+unable<br>
+anxious  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+due<br>
+keen<br>
+eager    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+likely<br>
+ready<br>
+unlikely   </div>
+
+<div style="  text-align: center;">
+willing<br>
+unwilling<br>
+prepared   </div>
+</div><br><br>
+
+&bull; Unfortunately, I was <b>unable to work</b> for over a week.<br>
+&bull; I'm really tired. I'm <b>ready to go to</b> bed.<br><hr><br>
+
+Sometimes the to-infinitive gives a reason for the adjective:<br><br>
+
+<div class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+amazed<br>
+delighted<br>
+disappointed  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+glad<br>
+happy<br>
+pleased    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+sad<br>
+proud<br>
+relieved   </div>
+
+<div style="  text-align: center;">
+sorry<br>
+unhappy<br>
+surprised   </div>
+</div><br><br>
+&bull; We were <b>happy to come</b> to the end of our journey.<br>
+&#10162; We were happy because we had come to the end of our journey.<br><br>
+&bull; John was <b>surprised to see</b> me.<br>
+&#10162; He was surprised because he saw me.<br><hr><br>
+
+We often use it + be followed by an adjective to give opinions:<br><br>
+
+<div  class="div4" style=" ">
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+easy<br>
+clever<br>
+difficult  </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+silly<br>
+right<br>
+wrong    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+kind<br>
+hard<br>
+foolish   </div>
+
+<div style="  text-align: center;">
+nice<br>
+possible<br>
+impossible   </div>
+</div><br><br>
+
+&bull; It's <b>easy to play</b> the piano, but it's very <b>difficult to play</b> well.<br>
+&bull; He spoke so quickly that it was <b>impossible to understand</b> him.<br><hr><br>
+
+We use the to-infinitive with these adjectives to give opinions about people:<br><br>
+
+<div  class="div4" style=" ">
+
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+clever<br>
+foolish    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+kind<br>
+nice   </div>
+
+<div style="  text-align: center; border-right: 1px solid grey;">
+right<br>
+wrong   </div>
+
+
+<div style="  text-align: center;">
+silly<br>
+-  </div>
+</div><br><br>
+
+&bull; She was <b>right to complain</b> about that hotel.<br>
+&bull; You were <b>clever to find</b> the answer so quickly.<br><hr><br>
+
+We use the preposition for to show who these adjectives refer to:<br><br>
+
+<div  class="div5" style=" ">
+
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+
+difficult    </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+
+easy   </div>
+
+<div style="  text-align: center; border-right: 1px solid grey;">
+
+hard   </div>
+
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+
+possible  </div>
+
+<div style="  text-align: center;">
+
+impossible  </div>
+</div><br><br>
+
+&bull; It was <b>difficult for us to hear</b> what she was saying.<br>
+&bull; It is <b>easy for you to criticise</b> other people.<br><br>
+
+With the other adjectives, we use <b>the preposition of:</b><br><br>
+
+
+&bull; It's <b>kind of you to help.</b><br>
+&bull; It would be <b>silly of him to spend</b> all his money.
+</div>
+</div>
+</div>
+
+
+
+<div class="div1" style=" ">
+
+
+<div style="text-align: left; font-size: 30px; background-color: #D1E4C4; padding: 10px; border-radius: 6px; box-shadow: 1px 1px 1px grey;">
+
+<div style="text-align: left; font-size: 30px;">
+<div style="text-align: center; font-size: 37px;"><b> Nouns with to-infinitives
+</b></div><br>
+
+We use the to-infinitive as a postmodifier &middot;see noun phrases&middot; after abstract nouns like:<br><br>
+
+<div class="div3" style=" ">
+
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+ability<br>
+attempt<br>
+chance   </div>
+
+<div style=" border-right: 1px solid grey; text-align: center;">
+need<br>
+desire<br>
+failure   </div>
+
+<div style="  text-align: center; ">
+wish<br>
+refusal<br>
+opportunity   </div>
+</div><br><br>
+
+
+
+&bull;  They gave him <b>an opportunity to escape.</b><br>
+&bull;  He was annoyed by <b>her refusal to answer.</b><br>
+&bull;  I have <b>no desire to be</b> rich.<br>
+&bull;  There is <b>no need to shout.</b><br><br>
+
+We often use the to-infinitive as a postmodifier after <b>indefinite pronouns:</b><br><br>
+
+&bull; When I am travelling I always take <b>something to read.</b><br>
+&bull;  There is hardly <b>anything to do</b> in most of these small towns.<br>
+&bull;  I was all alone. I had <b>no one to talk to.</b>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script>
+
+  var sound1 = new Audio();
+  sound1.src = "spectacles.mp3";
+
+  var sound2 = new Audio();
+  sound2.src = "pyjamas.mp3";
+
+  var sound3 = new Audio();
+  sound3.src = "tights.mp3";
+
+  var sound4 = new Audio();
+  sound4.src = "trousers.mp3";
+
+  var sound5 = new Audio();
+  sound5.src = "pants.mp3";
+
+  var sound6 = new Audio();
+  sound6.src = "jeans.mp3";
+
+  var sound7 = new Audio();
+  sound7.src = "shorts.mp3";
+
+  var sound8 = new Audio();
+  sound8.src = "boxers.mp3";
+
+  var sound9 = new Audio();
+  sound9.src = "knickers.mp3";
+
+  var sound10 = new Audio();
+  sound10.src = "pliers.mp3";
+
+  var sound11 = new Audio();
+  sound11.src = "scissors.mp3";
+
+  var sound12 = new Audio();
+  sound12.src = "binoculars.mp3";
+ 
+  var sound13 = new Audio();
+  sound13.src = "pincers.mp3";
+
+  var sound14 = new Audio();
+  sound14.src = "flock.mp3";
+
+  var sound15 = new Audio();
+  sound15.src = "herd.mp3";
+
+  var sound16 = new Audio();
+  sound16.src = "team.mp3";
+
+  var sound17 = new Audio();
+  sound17.src = "anitemof.mp3";
+
+  var sound18 = new Audio();
+  sound18.src = "itemsof.mp3";
+
+ 
+  var sound19 = new Audio();
+  sound19.src = "both.mp3";
+
+  var sound20 = new Audio();
+  sound20.src = "either.mp3";
+
+  var sound21 = new Audio();
+  sound21.src = "neither.mp3";
+
+  var sound22 = new Audio();
+  sound22.src = "afew.mp3";
+
+  var sound23 = new Audio();
+  sound23.src = "fewer.mp3";
+
+  var sound24 = new Audio();
+  sound24.src = "acoupleof.mp3";
+
+  var sound25 = new Audio();
+  sound25.src = "hundredsof.mp3";
+
+  var sound26 = new Audio();
+  sound26.src = "thousandsof.mp3";
+
+  var sound27 = new Audio();
+  sound27.src = "notmuch.mp3";
+
+  var sound28 = new Audio();
+  sound28.src = "abitof.mp3";
+
+  var sound29 = new Audio();
+  sound29.src = "alittle.mp3";
+
+  var sound30 = new Audio();
+  sound30.src = "agreatdealof.mp3";
+
+  var sound31 = new Audio();
+  sound31.src = "agooddealof.mp3";
+ 
+
+  
+
+
+</script>
+</body>
+</html>
